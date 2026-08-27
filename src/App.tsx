@@ -7,7 +7,7 @@ import {
   useElements 
 } from '@stripe/react-stripe-js';
 
-const CheckoutForm = ({ stripeKey }: { stripeKey: string }) => {
+const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
 
@@ -155,7 +155,7 @@ export default function App() {
       <div style={{ maxWidth: '420px', width: '100%', padding: '24px', background: '#fff', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', fontFamily: 'sans-serif' }}>
         <h2 style={{ textAlign: 'center', color: '#333', marginBottom: '20px' }}>Secure PIN Generator</h2>
         <Elements stripe={stripePromise}>
-          <CheckoutForm stripeKey={publishableKey} />
+          <CheckoutForm />
         </Elements>
       </div>
     </div>
